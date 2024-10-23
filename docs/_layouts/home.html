@@ -12,7 +12,10 @@ layout: default
       {{ post.author }}
     </h2>
     <h3>
-      <a href="assets/notebooks/{{ post.notebook }}">Notebook</a>
+      <a href="assets/notebooks/{{ post.notebook }}">Download Jupyter notebook</a>
+    </h3>
+    <h3>
+      <a href="{{ post.colab }}">Open in Colab</a>
     </h3>
     {% if post.image %}
       <div>
