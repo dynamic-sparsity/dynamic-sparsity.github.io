@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+{% for post in paginator.posts %}
+{% if post.layout == "post" %}
+  <div class="posts-container">
+    <h1>
+      <a href="{{ site.github.url }}{{ post.url }}">{{ post.title }}</a>
+    </h1>
+    <h2>
+      {{ post.author }}
+    </h2>
+    <h3>
+      <a href="{{ site.github.url }}/{{ post.notebook }}">Notebook</a>
+    </h3>
+    {% if post.image %}
+      <div>
+        <a href="{{ site.github.url }}{{ post.url }}"><img src="{{ site.github.url }}/assets/img/{{ post.image }}"></a>
+      </div>
+    {% endif %}
+  </div>
+{% endif %}
+{% endfor %}
