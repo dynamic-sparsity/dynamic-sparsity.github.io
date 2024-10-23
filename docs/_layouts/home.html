@@ -4,24 +4,26 @@ layout: default
 
 {% for post in paginator.posts %}
 {% if post.layout == "post" %}
-  <div class="posts-container">
-    <h1>
-      <a href="{{ site.github.url }}{{ post.url }}">{{ post.title }}</a>
-    </h1>
-    <h2>
-      {{ post.author }}
-    </h2>
-    <h3>
-      <a href="assets/notebooks/{{ post.notebook }}">Download Jupyter notebook</a>
-    </h3>
-    <h3>
-      <a href="{{ post.colab }}">Open in Colab</a>
-    </h3>
+  <div class="post-container" style="display: flex; align-items: flex-start; margin-bottom: 20px;">
     {% if post.image %}
-      <div>
-        <a href="{{ site.github.url }}{{ post.url }}"><img src="{{ site.github.url }}/assets/img/{{ post.image }}"></a>
+      <div class="image-container" style="margin-right: 20px;">
+        <a href="{{ site.github.url }}{{ post.url }}"><img src="{{ site.github.url }}/assets/img/{{ post.image }}" alt="{{ post.title }}" style="max-width: 300px; height: auto;"></a>
       </div>
     {% endif %}
+    <div class="text-container">
+      <h1>
+        <a href="{{ site.github.url }}{{ post.url }}">{{ post.title }}</a>
+      </h1>
+      <h2>
+        {{ post.author }}
+      </h2>
+      <h4>
+        <a href="assets/notebooks/{{ post.notebook }}">Download Jupyter notebook</a>
+      </h4>
+      <h4>
+        <a href="{{ post.colab }}">Open in Colab</a>
+      </h4>
+    </div>
   </div>
 {% endif %}
 {% endfor %}
