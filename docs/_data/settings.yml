@@ -8,6 +8,10 @@ google-ID: ''
 
 menu:
 - {name: 'Authors',   url: 'authors.html'}
+- {name: 'Slides',   url: '#slides'}
+- {name: 'Notebooks',   url: '#notebooks'}
+- {name: 'Program',   url: 'program.html'}
+- {name: 'Bibliography',   url: 'biblio.html'}
 - {name: 'NeurIPS 2024',   link: 'https://neurips.cc/virtual/2024/tutorial/99527'}
 
 # Available social icons are powered by Font Awesome, so you can use any icon that they offer

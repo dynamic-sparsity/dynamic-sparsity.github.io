@@ -2,6 +2,24 @@
 layout: default
 ---
 
+<section>
+  <h2><a id="summary">Summary</a></h2>
+<p>
+Recent advancements in machine learning have caused a shift from traditional sparse modeling, which focuses on static feature selection in neural representations, to dynamic sparsity, where different neural pathways are activated depending on the input.
+This line of work is fueling, among other directions, new architectures for foundation models (such as sparse Mixtures of Experts). In this tutorial, we explore how 
+dynamic sparsity provides several advantages, especially: i) incorporating structural constraints in model representations and predictions; ii) performing conditional computation, adaptively adjusting the model architecture or representation size based on the input complexity; iii) routing to mixtures of experts to attain the performance of dense models while accelerating training and inference or to better generalize to new tasks.
+This tutorial connects these lines of work through a unified perspective, including pedagogical materials with concrete examples in a wide array of applications (including Natural Language Processing, Computer Vision, and Reinforcement Learning) to familiarise general research audiences with this new, emerging paradigm and to foster future research.
+</p>
+</section>
+
+<section>
+  <h2><a id="slides">Slides</a></h2>
+  <p> Appearing soon!
+  </p>
+</section>
+
+<section>
+  <h2><a id="notebooks">Notebooks</a></h2>
 {% for post in paginator.posts %}
 {% if post.layout == "post" %}
   <div class="post-container" style="display: flex; align-items: flex-start; margin-bottom: 20px;">
@@ -27,3 +45,4 @@ layout: default
   </div>
 {% endif %}
 {% endfor %}
+</section>
