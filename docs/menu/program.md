@@ -18,4 +18,20 @@ permalink: /program
   - Sparse memories: Cache Eviction Policies, Dynamic Memory Compression
   - Modular deep learning and sparse mixtures of adapters
 * Q&A (15 min) 
-* Panel with Sara Hooker and Emtiyaz Khan (30 min)
+* Panel with Sara Hooker and Alessandro Sordoni (30 min)
+
+<h1>Panellists</h1>
+<ul>
+  {% for author in site.panellists %}
+    <h2><a href="{{ author.website }}">{{ author.name }}</a></h2>
+        <h3>{{ author.position }}</h3>
+    <li style="display: flex; align-items: flex-start; margin-bottom: 20px;">
+      <div style="margin-right: 20px;">
+        <img src="assets/img/{{ author.image }}" alt="{{ author.name }}" style="width: 2500px; height: 300px; object-fit: cover;">
+      </div>
+      <div>
+        <p>{{ author.content | markdownify }}</p>
+      </div>
+    </li>
+  {% endfor %}
+</ul>

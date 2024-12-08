@@ -25,12 +25,12 @@ This tutorial connects these lines of work through a unified perspective, includ
   <div class="post-container" style="display: flex; align-items: flex-start; margin-bottom: 20px;">
     {% if post.image %}
       <div class="image-container" style="margin-right: 20px;">
-        <a href="{{ site.github.url }}{{ post.url }}"><img src="{{ site.github.url }}/assets/img/{{ post.image }}" alt="{{ post.title }}" style="max-width: 300px; height: auto;"></a>
+        <img src="{{ site.github.url }}/assets/img/{{ post.image }}" alt="{{ post.title }}" style="max-width: 300px; height: auto;">
       </div>
     {% endif %}
     <div class="text-container">
       <h1>
-        <a href="{{ site.github.url }}{{ post.url }}">{{ post.title }}</a>
+        {{ post.title }}
       </h1>
       <h2>
         {{ post.author }}
